@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Gilroy';
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+body{
+    background: #000000;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+}
+nav,footer,header{
+    display: block;
+}
+button{
+    cursor: pointer;
+}
+a:focus,a:active{
+    outline: none;
+}
+a{
+    text-decoration: none;
+    display: inline-flex;
+}
+
+a:hover{
+    text-decoration: none;
+    opacity: 0.8;
+}
+ul,li,ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+input{
+    outline: none;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+/*Цвет placeholder поиска*/
+input::-webkit-input-placeholder {color: #000000;}
+input::-moz-placeholder          {color: #000000;}/* Firefox 19+ */
+input:-moz-placeholder           {color: #000000;}/* Firefox 18- */
+input:-ms-input-placeholder      {color: #000000;}
+
+/* Extra small: 0px (320px) - 576px */
+@media (max-width: 575px){
+     
+}
+
+
