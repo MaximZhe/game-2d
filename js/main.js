@@ -29,14 +29,14 @@ canvas.addEventListener("mouseup", function () {
     mouse.click = false;
 });
 
-// Bubbles
+
 
 
 //Player
 const playerLeft = new Image();
-playerLeft.src = "../img/fish-left.png";
+playerLeft.src = "img/fish-left.png";
 const playerRight = new Image();
-playerRight.src = "../img/fish-right.png";
+playerRight.src = "img/fish-right.png";
 class Player {
     constructor() {
         this.x = canvas.width;
@@ -63,7 +63,7 @@ class Player {
         }
         draw() {
             if(mouse.click) {
-                ctx.lineWidth = 0.001;
+                ctx.lineWidth = 0.6;
                 ctx.beginPath();
                 ctx.moveTo(this.x, this.y);
                 ctx.lineTo(mouse.x,mouse.y);
@@ -80,13 +80,9 @@ class Player {
             ctx.translate(this.x, this.y);
             ctx.rotate(this.angle);
             if(this.x >= mouse.x){
-                ctx.drawImage(playerLeft, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,
-                    this.spriteWidth,this.spriteHeight,0 - 60 ,0 - 45,
-                    this.spriteWidth/4,this.spriteHeight/4);
+                ctx.drawImage(playerLeft, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,this.spriteWidth,this.spriteHeight,0 - 60 ,0 - 45,this.spriteWidth/4,this.spriteHeight/4);
             }else{
-                ctx.drawImage(playerRight, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,
-                    this.spriteWidth,this.spriteHeight,0 - 60 ,0 - 45,
-                    this.spriteWidth/4,this.spriteHeight/4);
+                ctx.drawImage(playerRight, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,this.spriteWidth,this.spriteHeight, 0 - 60 , 0 - 45, this.spriteWidth/4, this.spriteHeight/4);
             }
             ctx.restore();
             
@@ -96,7 +92,7 @@ class Player {
 const player = new Player();
 
 
-
+// Bubbles
 const bubblesArr = [];
 
 class Bubble {
